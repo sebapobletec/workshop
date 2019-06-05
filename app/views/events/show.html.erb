@@ -17,8 +17,8 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @event.company %>
+  <%= @event.company.name %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to 'Edit', edit_company_event_path(@event) %> |
+<%= link_to 'Back', company_events_path %>
