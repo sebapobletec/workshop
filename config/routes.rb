@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :events
+
   resources :companies do
       resources :workers
+      resources :events
   end
 
   devise_for :users do
