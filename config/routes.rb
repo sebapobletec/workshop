@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :companies do
       resources :workers
       resources :events do
-        resources :attendances, only: :create
+        resources :attendances
       end
   end
 
