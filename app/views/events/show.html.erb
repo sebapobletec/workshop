@@ -32,7 +32,9 @@
 <% @attendances.each do |attendance| %>
   <tr>
     <td><%= attendance.worker.name %></td>
-    <td><%= attendance.attend %></td><br>
+    <td><%= attendance.attend %></td>
+    <%= link_to 'Change', company_event_attendance_path(@company,@event, attendance.id), method: :PATCH %> 
+    <br>
   </tr>
 <% end %>
 

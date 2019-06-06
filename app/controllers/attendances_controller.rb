@@ -23,6 +23,14 @@ class AttendancesController < ApplicationController
   end
 
   def update
+    @attendance = Attendance.find(params[:id])
+    if @attendance.attend?
+     @attendance.attend = false
+    else
+      @attendance.attend = true 
+    end
+    @attendance.save
+    redirect_to company_event_path(params[:company_id], params[:event_id])
   end
 
   def destroy
