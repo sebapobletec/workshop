@@ -15,6 +15,7 @@ class EventsController < ApplicationController
     @workers = Worker.all
     @company = Company.find(params[:company_id])
     @workers = @workers.where(company: @company)
+    @attendances = Attendance.all
   end
 
   # GET /events/new
