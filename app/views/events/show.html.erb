@@ -33,7 +33,8 @@
   <tr>
     <td><%= attendance.worker.name %></td>
     <td><%= attendance.attend %></td>
-    <%= link_to 'Change', company_event_attendance_path(@company,@event, attendance.id), method: :PATCH %> 
+    <%= link_to 'Change', company_event_attendance_path(@company,@event, attendance.id), method: :PATCH %>
+    <%= link_to 'Delete', company_event_attendance_path(@company,@event, attendance.id), method: :DELETE %>
     <br>
   </tr>
 <% end %>
