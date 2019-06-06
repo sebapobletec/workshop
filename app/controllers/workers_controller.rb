@@ -44,6 +44,7 @@ class WorkersController < ApplicationController
   # PATCH/PUT /workers/1
   # PATCH/PUT /workers/1.json
   def update
+    @company = Company.find(params[:company_id])
     respond_to do |format|
       if @worker.update(worker_params)
         format.html { redirect_to company_workers_path(@company), notice: 'Worker was successfully updated.' }

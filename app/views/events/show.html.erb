@@ -20,5 +20,16 @@
   <%= @event.company.name %>
 </p>
 
-<%= link_to 'Edit', edit_company_event_path(@event) %> |
+<tbody>
+  <h2>Workers</h2>
+  <% @workers.each do |worker| %>
+    <tr>
+      <td><%= worker.name %></td>
+    </tr>
+  <% end %>
+</tbody>
+<br>
+<br>
+
+<%= link_to 'Edit', edit_company_event_path(@company, @event) %> |
 <%= link_to 'Back', company_events_path %>
