@@ -5,6 +5,12 @@ class CompaniesController < ApplicationController
   # GET /companies.json
   def index
     @companies = Company.all
+    if user_signed_in?
+    @user = current_user
+    @companies = @companies.where(user: @user)
+    else
+      @companies = []
+    end
   end
 
   # GET /companies/1
