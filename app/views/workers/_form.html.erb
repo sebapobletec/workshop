@@ -10,17 +10,20 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-group col-md-6">
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name, class:'form-control', placeholder: 'Norman Castro' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :rut %>
-    <%= form.text_field :rut %>
+  <div class="form-group col-md-6">
+    <div class="field">
+      <%= form.label :rut %>
+      <%= form.text_field :rut, class:'form-control', placeholder: '17.236.599-5' %>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <button type="submit" class="btn btn-primary m-1">CREATE WORKER</button>
+
 <% end %>
