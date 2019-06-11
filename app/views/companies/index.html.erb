@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
+<div class="container col">
+  <h1 class="jumbotron p-1">Companies</h1>
 
-<h1 class="jumbotron p-1">Companies</h1>
+  <div class="m-1 p-1">
+    <%= link_to 'Add New Company', new_company_path, class: 'btn btn-primary' %>
+  </div>
 
-<div class="m-1 p-1">
-  <%= link_to 'Add New Company', new_company_path, class: 'btn btn-primary' %>
 </div>
 
 <div class="container col">
